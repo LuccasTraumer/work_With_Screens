@@ -22,10 +22,10 @@ public class CalcActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calc);
 
         Intent it = getIntent(); // Pega a intent que veio
-        if(it != null) { // Verifica se tem Intent
-            Bundle params = it.getExtras(); // Pega as coisas alem das "Screens"
+        if(it != null) { // Verifica se a Intent não é nula
+            Bundle params = it.getExtras(); // Pega as coisas alem das "Screens"(Intents)
             if(params != null){ // Verifica se tem parametros
-                strPassed = (String)params.get("param1"); // Pega o parametro com o este nome de parametro
+                strPassed = (String)params.get("param1"); // Pega o parametro com o esta chave
             }
         }
 
@@ -39,7 +39,7 @@ public class CalcActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(CalcActivity.this, MainActivity.class); // Os paramentros são a "Screen" Atual e a "Screen" que quero ir
+                Intent it = new Intent(CalcActivity.this, MainActivity.class); // Os paramentros são a "Screen"(Intent) Atual e a "Screen"(Intent) que quero ir
 
                 startActivity(it); // Logo depois inicio a Intenet
             }

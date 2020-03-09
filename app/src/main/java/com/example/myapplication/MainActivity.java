@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
         if(v.getId() == R.id.btnSend){
             Toast.makeText(this,"Clickou enviar",Toast.LENGTH_SHORT).show(); // mMostra um toast na tela
-            Intent it = new Intent(MainActivity.this,CalcActivity.class);
-            it.putExtra("param1","Eu passei ..."); // Esta enviando parametros com a activity
-            startActivity(it);
+            Intent it = new Intent(MainActivity.this,CalcActivity.class); // Vai mudar de Intent(tela) da Atual para a que você quer
+            it.putExtra("param1","Eu passei ..."); // Esta enviando parametros com a activity, Primeiro vai a chave do parametro depois o valor
+            startActivity(it); //Depois starta a Intent
 
         }
         if(v.getId() == R.id.btnSave){
